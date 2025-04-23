@@ -9,11 +9,13 @@ function EmailDetails({ selectedMessage }) {
       <h2 className="text-lg font-semibold mb-3">✉️ Message Detail</h2>
       <div className="space-y-2 text-sm">
         <p>
-          <strong>From:</strong>{" "}
+          <strong>From:</strong>
+          {selectedMessage.sender.emailAddress}
           {selectedMessage.from.name || selectedMessage.from.address}
         </p>
         <p>
-          <strong>To:</strong>{" "}
+          <strong>To:</strong>
+          {selectedMessage.to[0]}
           {selectedMessage.to.map((t) => t.address).join(", ")}
         </p>
         <p>
