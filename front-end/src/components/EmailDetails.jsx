@@ -11,7 +11,6 @@ function EmailDetails({ selectedMessage }) {
         <p>
           <strong>From:</strong>
           {selectedMessage.sender.emailAddress}
-          {selectedMessage.from.name || selectedMessage.from.address}
         </p>
         <p>
           <strong>To:</strong>
