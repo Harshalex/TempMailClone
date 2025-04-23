@@ -16,7 +16,7 @@ function EmailCard({ messages, loading, setLoading }) {
     } else {
       try {
         setLoading(true);
-        const res = await axios.get(`http://localhost:5000/messages/${id}`);
+        const res = await axios.get(`https://tempmailclone.onrender.com/messages/${id}`);
         setSelectedMessage(res.data);
         console.log(selectedMessage);
         setLoading(false);
