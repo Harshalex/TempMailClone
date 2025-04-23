@@ -14,7 +14,7 @@ function Home() {
 
   const generateEmail = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/generate-email");
+      const res = await axios.get("https://tempmailclone.onrender.com/generate-email");
       setEmail(res.data.address);
       console.log(res.data.address);
       localStorage.setItem("locEmail", JSON.stringify(res.data.address));
@@ -25,7 +25,7 @@ function Home() {
 
   const fetchMessages = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/messages");
+      const res = await axios.get("https://tempmailclone.onrender.com/messages");
       setMessages(res.data);
       console.log(res.data);
       localStorage.setItem("allMails", JSON.stringify(res.data));
